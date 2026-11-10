@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izuke – Sign in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Caveat:wght@600&family=Bebas+Neue&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="../assets/proto.css">
+<script src="../assets/proto.js"></script>
+</head>
+<body>
+<div class="phone">
+  <div class="img auth" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.1) 35%,rgba(10,10,16,.92) 70%)"></div>
+  <div data-status="light" style="position:relative;z-index:2"></div>
+  <div class="body" style="position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:0 24px 34px">
+    <div class="row gap10"><img src="../assets/logo_mark.png" alt="" style="width:40px;filter:brightness(0) invert(1)"><span style="font:800 28px 'Hanken Grotesk';color:#fff">izuke</span></div>
+    <p style="color:rgba(255,255,255,.85);font-size:17px;margin:10px 0 26px">Find someone to run with, nearby.</p>
+    <div class="col gap10">
+      <a class="btn white" href="setup_1.html"><i class="ph-fill ph-apple-logo"></i>Continue with Apple</a>
+      <a class="btn white" href="setup_1.html"><i class="ph-bold ph-google-logo"></i>Continue with Google</a>
+      <a class="btn" style="background:#1877F2;color:#fff" href="setup_1.html"><i class="ph-fill ph-facebook-logo"></i>Continue with Facebook</a>
+      <div class="row gap10" style="color:rgba(255,255,255,.6);font-size:13px;margin:4px 0"><span class="grow" style="height:1px;background:rgba(255,255,255,.2)"></span>or<span class="grow" style="height:1px;background:rgba(255,255,255,.2)"></span></div>
+      <a class="btn" style="border:1.5px solid rgba(255,255,255,.4);color:#fff" href="email_auth.html"><i class="ph ph-envelope-simple"></i>Continue with Email</a>
+    </div>
+    <p class="center" style="color:rgba(255,255,255,.6);font-size:12px;margin-top:18px">By continuing you agree to our <u>Terms</u> &amp; <u>Privacy Policy</u></p>
+  </div>
+  <div data-home></div>
+</div>
+<p class="proto-note">Apple, Google, Facebook or email. Facebook works for app admins/testers until the Facebook app goes Live.</p>
+</body>
+</html>

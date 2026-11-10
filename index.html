@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izuke – Prototype</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #F4F3F1; --card: #fff; --text: #0F1B35; --muted: #5E6475; --berry: #A8114F; --line: #E4E1DC; }
+  [data-theme="dark"] { --bg: #0B0B10; --card: #15151D; --text: #DADBDE; --muted: #9BA1AD; --line: #24242E; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font: 15px/1.5 'Inter', sans-serif; padding: 48px 32px 80px; }
+  header { max-width: 1240px; margin: 0 auto 36px; display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+  h1 { font: 800 34px 'Hanken Grotesk'; letter-spacing: -.02em; }
+  header p { color: var(--muted); max-width: 640px; margin-top: 6px; }
+  .theme { display: inline-flex; padding: 4px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+  .theme a { padding: 8px 16px; border-radius: 9px; font-weight: 600; font-size: 14px; color: var(--muted); text-decoration: none; }
+  .theme a.on { background: var(--berry); color: #fff; }
+  section { max-width: 1240px; margin: 0 auto 44px; }
+  h2 { font: 800 20px 'Hanken Grotesk'; margin-bottom: 16px; }
+  h2 span { font: 600 13px 'Inter'; color: var(--muted); margin-left: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 22px; }
+  .shot h3 { font: 700 14px 'Hanken Grotesk'; margin-top: 10px; }
+  .shot p { font-size: 12.5px; color: var(--muted); margin-top: 2px; line-height: 1.4; }
+  .links { display: flex; gap: 12px; margin-top: 6px; font-size: 12.5px; font-weight: 600; }
+  .links a { color: var(--berry); text-decoration: none; }
+  .thumb { display: block; position: relative; width: 100%; aspect-ratio: 390 / 844; border-radius: 22px; overflow: hidden; background: var(--card); border: 1px solid var(--line); }
+  .thumb iframe { position: absolute; top: 0; left: 0; width: 390px; height: 844px; border: 0; transform-origin: 0 0; pointer-events: none; }
+  .thumb::after { content: ''; position: absolute; inset: 0; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Izuke prototype</h1>
+    <p>Every screen of the app as of November 2026 — 86 screens, each in light and dark. Built from the app's own colours, type and text. Features switched off for launch (the For You / Near You feed, sharing an activity) are left out.</p>
+  </div>
+  <nav class="theme" aria-label="Theme"><a href="index.html" id="t-light">Light</a><a href="index.html?theme=dark" id="t-dark">Dark</a></nav>
+</header>
+  <section>
+    <h2>Start <span>4</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/splash.html" data-href="screens/splash.html"><iframe loading="lazy" tabindex="-1" data-src="screens/splash.html" title="Splash"></iframe></a>
+        <h3>Splash</h3>
+        <p>Brand mark while the app restores the session, then straight to sign-in (no intro slides).</p>
+        <div class="links"><a href="screens/splash.html">Light</a><a href="screens/splash.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/auth.html" data-href="screens/auth.html"><iframe loading="lazy" tabindex="-1" data-src="screens/auth.html" title="Sign in"></iframe></a>
+        <h3>Sign in</h3>
+        <p>Apple, Google, Facebook or email. Facebook works for app admins/testers until the Facebook app goes Live.</p>
+        <div class="links"><a href="screens/auth.html">Light</a><a href="screens/auth.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/email_auth.html" data-href="screens/email_auth.html"><iframe loading="lazy" tabindex="-1" data-src="screens/email_auth.html" title="Email sign-up"></iframe></a>
+        <h3>Email sign-up</h3>
+        <p>Sign In / Sign Up tabs; sign-up asks for a name.</p>
+        <div class="links"><a href="screens/email_auth.html">Light</a><a href="screens/email_auth.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/check_email.html" data-href="screens/check_email.html"><iframe loading="lazy" tabindex="-1" data-src="screens/check_email.html" title="Check your email"></iframe></a>
+        <h3>Check your email</h3>
+        <p>After email sign-up; the link opens the app straight into setup.</p>
+        <div class="links"><a href="screens/check_email.html">Light</a><a href="screens/check_email.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Setup <span>8</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/setup_1.html" data-href="screens/setup_1.html"><iframe loading="lazy" tabindex="-1" data-src="screens/setup_1.html" title="Setup 1 — Your profile"></iframe></a>
+        <h3>Setup 1 — Your profile</h3>
+        <p>Photo, name, bio, date of birth and gender.</p>
+        <div class="links"><a href="screens/setup_1.html">Light</a><a href="screens/setup_1.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/setup_2.html" data-href="screens/setup_2.html"><iframe loading="lazy" tabindex="-1" data-src="screens/setup_2.html" title="Setup 2 — Goals"></iframe></a>
+        <h3>Setup 2 — Goals</h3>
+        <p>Pick every goal that applies.</p>
+        <div class="links"><a href="screens/setup_2.html">Light</a><a href="screens/setup_2.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/setup_3.html" data-href="screens/setup_3.html"><iframe loading="lazy" tabindex="-1" data-src="screens/setup_3.html" title="Setup 3 — Running vibes"></iframe></a>
+        <h3>Setup 3 — Running vibes</h3>
+        <p>Run type, units, pace, distance and availability.</p>
+        <div class="links"><a href="screens/setup_3.html">Light</a><a href="screens/setup_3.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/setup_4.html" data-href="screens/setup_4.html"><iframe loading="lazy" tabindex="-1" data-src="screens/setup_4.html" title="Setup 4 — Location"></iframe></a>
+        <h3>Setup 4 — Location</h3>
+        <p>Approximate location to find people nearby; the exact address is never shared.</p>
+        <div class="links"><a href="screens/setup_4.html">Light</a><a href="screens/setup_4.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/setup_interests.html" data-href="screens/setup_interests.html"><iframe loading="lazy" tabindex="-1" data-src="screens/setup_interests.html" title="Setup 5 — Interests"></iframe></a>
+        <h3>Setup 5 — Interests</h3>
+        <p>Other activities besides running — optional.</p>
+        <div class="links"><a href="screens/setup_interests.html">Light</a><a href="screens/setup_interests.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/setup_safety.html" data-href="screens/setup_safety.html"><iframe loading="lazy" tabindex="-1" data-src="screens/setup_safety.html" title="Setup 6 — Stay safe"></iframe></a>
+        <h3>Setup 6 — Stay safe</h3>
+        <p>Emergency contacts for SOS and missed check-ins. Skippable; asked again before the first meetup.</p>
+        <div class="links"><a href="screens/setup_safety.html">Light</a><a href="screens/setup_safety.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/setup_review.html" data-href="screens/setup_review.html"><iframe loading="lazy" tabindex="-1" data-src="screens/setup_review.html" title="Setup 7 — Review profile"></iframe></a>
+        <h3>Setup 7 — Review profile</h3>
+        <p>Live preview of how others see you; tap any section to edit.</p>
+        <div class="links"><a href="screens/setup_review.html">Light</a><a href="screens/setup_review.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/verification.html" data-href="screens/verification.html"><iframe loading="lazy" tabindex="-1" data-src="screens/verification.html" title="Selfie check"></iframe></a>
+        <h3>Selfie check</h3>
+        <p>Liveness check at the end of setup. Optional: Maybe Later finishes setup without the Verified badge.</p>
+        <div class="links"><a href="screens/verification.html">Light</a><a href="screens/verification.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Map <span>5</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/map_home.html" data-href="screens/map_home.html"><iframe loading="lazy" tabindex="-1" data-src="screens/map_home.html" title="Map"></iframe></a>
+        <h3>Map</h3>
+        <p>Home tab. Activities, club events and races near you; Runners opens the people nearby. Pins are the app's: a berry-ringed tile with the activity's emoji; a host can choose to show their face instead.</p>
+        <div class="links"><a href="screens/map_home.html">Light</a><a href="screens/map_home.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/map_preview.html" data-href="screens/map_preview.html"><iframe loading="lazy" tabindex="-1" data-src="screens/map_preview.html" title="Map — activity preview"></iframe></a>
+        <h3>Map — activity preview</h3>
+        <p>Tapping a pin slides up its card; tap it to open the activity.</p>
+        <div class="links"><a href="screens/map_preview.html">Light</a><a href="screens/map_preview.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/map_search.html" data-href="screens/map_search.html"><iframe loading="lazy" tabindex="-1" data-src="screens/map_search.html" title="Map — search a place"></iframe></a>
+        <h3>Map — search a place</h3>
+        <p>Search any city or area to see what's there (other cities are Pro).</p>
+        <div class="links"><a href="screens/map_search.html">Light</a><a href="screens/map_search.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/runners_nearby.html" data-href="screens/runners_nearby.html"><iframe loading="lazy" tabindex="-1" data-src="screens/runners_nearby.html" title="Runners nearby"></iframe></a>
+        <h3>Runners nearby</h3>
+        <p>People near you, closest first. Free shows the 10 closest; Pro shows everyone.</p>
+        <div class="links"><a href="screens/runners_nearby.html">Light</a><a href="screens/runners_nearby.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/runner_filter.html" data-href="screens/runner_filter.html"><iframe loading="lazy" tabindex="-1" data-src="screens/runner_filter.html" title="Filter runners"></iframe></a>
+        <h3>Filter runners</h3>
+        <p>Pace, distance, how far, trust and age. With women-only mode on, Show is locked to Women.</p>
+        <div class="links"><a href="screens/runner_filter.html">Light</a><a href="screens/runner_filter.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Explore &amp; activities <span>8</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/explore.html" data-href="screens/explore.html"><iframe loading="lazy" tabindex="-1" data-src="screens/explore.html" title="Explore — Upcoming"></iframe></a>
+        <h3>Explore — Upcoming</h3>
+        <p>Explore tab. Only Upcoming at launch — the For You / Near You feeds are switched off. Day strip and type chips filter what's coming up nearby.</p>
+        <div class="links"><a href="screens/explore.html">Light</a><a href="screens/explore.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/meetup_post.html" data-href="screens/meetup_post.html"><iframe loading="lazy" tabindex="-1" data-src="screens/meetup_post.html" title="Post an activity — step 1"></iframe></a>
+        <h3>Post an activity — step 1</h3>
+        <p>The + button. What kind, then when, then details and the map pin.</p>
+        <div class="links"><a href="screens/meetup_post.html">Light</a><a href="screens/meetup_post.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/meetup_post_details.html" data-href="screens/meetup_post_details.html"><iframe loading="lazy" tabindex="-1" data-src="screens/meetup_post_details.html" title="Post an activity — details"></iframe></a>
+        <h3>Post an activity — details</h3>
+        <p>Name, spots, distance and pace for a run, women-only (for women hosts), description, and the map pin.</p>
+        <div class="links"><a href="screens/meetup_post_details.html">Light</a><a href="screens/meetup_post_details.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/meetup_detail.html" data-href="screens/meetup_detail.html"><iframe loading="lazy" tabindex="-1" data-src="screens/meetup_detail.html" title="Activity detail"></iframe></a>
+        <h3>Activity detail</h3>
+        <p>As a guest who has joined. Live-location sharing appears from 2 hours before the start.</p>
+        <div class="links"><a href="screens/meetup_detail.html">Light</a><a href="screens/meetup_detail.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/meetup_detail_host.html" data-href="screens/meetup_detail_host.html"><iframe loading="lazy" tabindex="-1" data-src="screens/meetup_detail_host.html" title="Activity detail — host"></iframe></a>
+        <h3>Activity detail — host</h3>
+        <p>Your own activity: edit, share, cancel. After it ends, Confirm Activity asks who came.</p>
+        <div class="links"><a href="screens/meetup_detail_host.html">Light</a><a href="screens/meetup_detail_host.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/meetup_chat.html" data-href="screens/meetup_chat.html"><iframe loading="lazy" tabindex="-1" data-src="screens/meetup_chat.html" title="Activity chat"></iframe></a>
+        <h3>Activity chat</h3>
+        <p>Group chat for everyone going. After it happens: rate it and Create Moment. ("Share this activity" is hidden at launch.)</p>
+        <div class="links"><a href="screens/meetup_chat.html">Light</a><a href="screens/meetup_chat.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/meetup_confirm.html" data-href="screens/meetup_confirm.html"><iframe loading="lazy" tabindex="-1" data-src="screens/meetup_confirm.html" title="Confirm activity"></iframe></a>
+        <h3>Confirm activity</h3>
+        <p>The host confirms who came — it records attendance for kudos and Moments.</p>
+        <div class="links"><a href="screens/meetup_confirm.html">Light</a><a href="screens/meetup_confirm.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/report_meetup.html" data-href="screens/report_meetup.html"><iframe loading="lazy" tabindex="-1" data-src="screens/report_meetup.html" title="Report activity"></iframe></a>
+        <h3>Report activity</h3>
+        <p>From ··· on an activity. It disappears from your map and a person reviews it.</p>
+        <div class="links"><a href="screens/report_meetup.html">Light</a><a href="screens/report_meetup.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Matches &amp; chat <span>9</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/matches.html" data-href="screens/matches.html"><iframe loading="lazy" tabindex="-1" data-src="screens/matches.html" title="Matches"></iframe></a>
+        <h3>Matches</h3>
+        <p>Matches tab: requests, your activities, running buddies, race and event chats.</p>
+        <div class="links"><a href="screens/matches.html">Light</a><a href="screens/matches.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/pending_requests.html" data-href="screens/pending_requests.html"><iframe loading="lazy" tabindex="-1" data-src="screens/pending_requests.html" title="Pending requests"></iframe></a>
+        <h3>Pending requests</h3>
+        <p>Run requests received and sent.</p>
+        <div class="links"><a href="screens/pending_requests.html">Light</a><a href="screens/pending_requests.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/run_request.html" data-href="screens/run_request.html"><iframe loading="lazy" tabindex="-1" data-src="screens/run_request.html" title="Run request"></iframe></a>
+        <h3>Run request</h3>
+        <p>Opening a request: their note, how you match, accept or decline.</p>
+        <div class="links"><a href="screens/run_request.html">Light</a><a href="screens/run_request.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/runner_profile.html" data-href="screens/runner_profile.html"><iframe loading="lazy" tabindex="-1" data-src="screens/runner_profile.html" title="Runner profile"></iframe></a>
+        <h3>Runner profile</h3>
+        <p>Someone else's profile (from the map or Runners). Still a large photo header in the app — My Profile now uses a round avatar.</p>
+        <div class="links"><a href="screens/runner_profile.html">Light</a><a href="screens/runner_profile.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/chat_thread.html" data-href="screens/chat_thread.html"><iframe loading="lazy" tabindex="-1" data-src="screens/chat_thread.html" title="Chat with a match"></iframe></a>
+        <h3>Chat with a match</h3>
+        <p>1:1 chat. A planned run shows as a card; live location from 2h before; after the run, confirm, rate and Create Moment. ("Share your run" is hidden at launch.)</p>
+        <div class="links"><a href="screens/chat_thread.html">Light</a><a href="screens/chat_thread.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/chat_after_run.html" data-href="screens/chat_after_run.html"><iframe loading="lazy" tabindex="-1" data-src="screens/chat_after_run.html" title="Chat — after the run"></iframe></a>
+        <h3>Chat — after the run</h3>
+        <p>Once both confirm (or one tracked it), the checklist unlocks: rate the run and make a Moment.</p>
+        <div class="links"><a href="screens/chat_after_run.html">Light</a><a href="screens/chat_after_run.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/plan_run.html" data-href="screens/plan_run.html"><iframe loading="lazy" tabindex="-1" data-src="screens/plan_run.html" title="Plan a run"></iframe></a>
+        <h3>Plan a run</h3>
+        <p>From a match chat: date, time, meeting point or route, distance, pace.</p>
+        <div class="links"><a href="screens/plan_run.html">Light</a><a href="screens/plan_run.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/block_report_sheet.html" data-href="screens/block_report_sheet.html"><iframe loading="lazy" tabindex="-1" data-src="screens/block_report_sheet.html" title="Block or report"></iframe></a>
+        <h3>Block or report</h3>
+        <p>··· on a profile or in a chat. Reporting also blocks.</p>
+        <div class="links"><a href="screens/block_report_sheet.html">Light</a><a href="screens/block_report_sheet.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/report_user.html" data-href="screens/report_user.html"><iframe loading="lazy" tabindex="-1" data-src="screens/report_user.html" title="Report a runner"></iframe></a>
+        <h3>Report a runner</h3>
+        <p>Category plus optional details. The runner is blocked automatically.</p>
+        <div class="links"><a href="screens/report_user.html">Light</a><a href="screens/report_user.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Safety <span>8</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/safe_consent.html" data-href="screens/safe_consent.html"><iframe loading="lazy" tabindex="-1" data-src="screens/safe_consent.html" title="Safe Meetup — consent"></iframe></a>
+        <h3>Safe Meetup — consent</h3>
+        <p>First time only, before sharing your live location with someone you trust.</p>
+        <div class="links"><a href="screens/safe_consent.html">Light</a><a href="screens/safe_consent.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/safe_send.html" data-href="screens/safe_send.html"><iframe loading="lazy" tabindex="-1" data-src="screens/safe_send.html" title="Safe Meetup — send your link"></iframe></a>
+        <h3>Safe Meetup — send your link</h3>
+        <p>Text it to your emergency contacts in one tap, or share another way (WhatsApp, Zalo…).</p>
+        <div class="links"><a href="screens/safe_send.html">Light</a><a href="screens/safe_send.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/safe_banner.html" data-href="screens/safe_banner.html"><iframe loading="lazy" tabindex="-1" data-src="screens/safe_banner.html" title="Safe Meetup — sharing"></iframe></a>
+        <h3>Safe Meetup — sharing</h3>
+        <p>A banner stays at the bottom of every screen while you share; tap for the controls.</p>
+        <div class="links"><a href="screens/safe_banner.html">Light</a><a href="screens/safe_banner.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/safe_controls.html" data-href="screens/safe_controls.html"><iframe loading="lazy" tabindex="-1" data-src="screens/safe_controls.html" title="Safe Meetup — controls"></iframe></a>
+        <h3>Safe Meetup — controls</h3>
+        <p>I'm safe, 30 more minutes, send the link again, or hold SOS for 3 seconds.</p>
+        <div class="links"><a href="screens/safe_controls.html">Light</a><a href="screens/safe_controls.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/sos_countdown.html" data-href="screens/sos_countdown.html"><iframe loading="lazy" tabindex="-1" data-src="screens/sos_countdown.html" title="SOS — countdown"></iframe></a>
+        <h3>SOS — countdown</h3>
+        <p>After holding SOS: 5 seconds to cancel before it sends.</p>
+        <div class="links"><a href="screens/sos_countdown.html">Light</a><a href="screens/sos_countdown.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/sos_sent.html" data-href="screens/sos_sent.html"><iframe loading="lazy" tabindex="-1" data-src="screens/sos_sent.html" title="SOS — sent"></iframe></a>
+        <h3>SOS — sent</h3>
+        <p>Emergency number for the country you're in, and texts to your contacts. The banner turns red.</p>
+        <div class="links"><a href="screens/sos_sent.html">Light</a><a href="screens/sos_sent.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/safety_page_web.html" data-href="screens/safety_page_web.html"><iframe loading="lazy" tabindex="-1" data-src="screens/safety_page_web.html" title="Live link — what your friend sees"></iframe></a>
+        <h3>Live link — what your friend sees</h3>
+        <p>izuke.app/t/… in any browser, no app. Turns red on SOS, amber on a missed check-in. Activities show only "Near …" — there's no exact meeting point.</p>
+        <div class="links"><a href="screens/safety_page_web.html">Light</a><a href="screens/safety_page_web.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/safety_settings.html" data-href="screens/safety_settings.html"><iframe loading="lazy" tabindex="-1" data-src="screens/safety_settings.html" title="Safety settings"></iframe></a>
+        <h3>Safety settings</h3>
+        <p>Settings → Safety: emergency contacts (up to 3), your emergency number, women-only mode (women), and how Izuke keeps you safe.</p>
+        <div class="links"><a href="screens/safety_settings.html">Light</a><a href="screens/safety_settings.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Moments <span>7</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/moment_editor.html" data-href="screens/moment_editor.html"><iframe loading="lazy" tabindex="-1" data-src="screens/moment_editor.html" title="Moment editor"></iframe></a>
+        <h3>Moment editor</h3>
+        <p>Opens straight into a design. Tap a pencil to edit (all text in one sheet), tap the photo to add one, swipe or pick from the strip to change design. Each photo frame can have its own picture.</p>
+        <div class="links"><a href="screens/moment_editor.html">Light</a><a href="screens/moment_editor.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/moment_editor_frames.html" data-href="screens/moment_editor_frames.html"><iframe loading="lazy" tabindex="-1" data-src="screens/moment_editor_frames.html" title="Moment editor — several photos"></iframe></a>
+        <h3>Moment editor — several photos</h3>
+        <p>Photobooth (3), Scrapbook and Corkboard (2): every frame has its own pencil; an empty frame says "Tap to add your photo".</p>
+        <div class="links"><a href="screens/moment_editor_frames.html">Light</a><a href="screens/moment_editor_frames.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/moment_text_sheet.html" data-href="screens/moment_text_sheet.html"><iframe loading="lazy" tabindex="-1" data-src="screens/moment_text_sheet.html" title="Moment editor — text"></iframe></a>
+        <h3>Moment editor — text</h3>
+        <p>Any text pencil opens all the card's text, the tapped field focused. Each optional field can come off the card.</p>
+        <div class="links"><a href="screens/moment_text_sheet.html">Light</a><a href="screens/moment_text_sheet.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/moment_items.html" data-href="screens/moment_items.html"><iframe loading="lazy" tabindex="-1" data-src="screens/moment_items.html" title="Moment editor — on the card"></iframe></a>
+        <h3>Moment editor — on the card</h3>
+        <p>Show or hide everything this design can show — the only way to hide the date, people or stats.</p>
+        <div class="links"><a href="screens/moment_items.html">Light</a><a href="screens/moment_items.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/moment_card.html" data-href="screens/moment_card.html"><iframe loading="lazy" tabindex="-1" data-src="screens/moment_card.html" title="Moment — saved"></iframe></a>
+        <h3>Moment — saved</h3>
+        <p>The saved card: share or save it as a Story (9:16) or Post (4:5). A design without a photo saves the card itself as the Moment's picture.</p>
+        <div class="links"><a href="screens/moment_card.html">Light</a><a href="screens/moment_card.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/moment_share_shape.html" data-href="screens/moment_share_shape.html"><iframe loading="lazy" tabindex="-1" data-src="screens/moment_share_shape.html" title="Moment — Story or Post"></iframe></a>
+        <h3>Moment — Story or Post</h3>
+        <p>Asked on Share and on Save image. The post is the card's centre crop.</p>
+        <div class="links"><a href="screens/moment_share_shape.html">Light</a><a href="screens/moment_share_shape.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/my_moments.html" data-href="screens/my_moments.html"><iframe loading="lazy" tabindex="-1" data-src="screens/my_moments.html" title="My Moments"></iframe></a>
+        <h3>My Moments</h3>
+        <p>Profile → My Moments. Public or private per Moment.</p>
+        <div class="links"><a href="screens/my_moments.html">Light</a><a href="screens/my_moments.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Runs &amp; routes <span>7</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/record_run.html" data-href="screens/record_run.html"><iframe loading="lazy" tabindex="-1" data-src="screens/record_run.html" title="Record a run"></iframe></a>
+        <h3>Record a run</h3>
+        <p>GPS tracking with distance, time and pace; follow a saved route if you like.</p>
+        <div class="links"><a href="screens/record_run.html">Light</a><a href="screens/record_run.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/run_summary.html" data-href="screens/run_summary.html"><iframe loading="lazy" tabindex="-1" data-src="screens/run_summary.html" title="Save your run"></iframe></a>
+        <h3>Save your run</h3>
+        <p>After Finish: name it and save. (Sharing it as a route post is switched off at launch.)</p>
+        <div class="links"><a href="screens/run_summary.html">Light</a><a href="screens/run_summary.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/my_runs.html" data-href="screens/my_runs.html"><iframe loading="lazy" tabindex="-1" data-src="screens/my_runs.html" title="My activities"></iframe></a>
+        <h3>My activities</h3>
+        <p>Profile → My activities: your tracked runs, and activities you hosted or went to.</p>
+        <div class="links"><a href="screens/my_runs.html">Light</a><a href="screens/my_runs.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/activity_detail.html" data-href="screens/activity_detail.html"><iframe loading="lazy" tabindex="-1" data-src="screens/activity_detail.html" title="Run detail"></iframe></a>
+        <h3>Run detail</h3>
+        <p>A tracked run: the map, distance, time and pace, and who you ran with.</p>
+        <div class="links"><a href="screens/activity_detail.html">Light</a><a href="screens/activity_detail.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/route_detail.html" data-href="screens/route_detail.html"><iframe loading="lazy" tabindex="-1" data-src="screens/route_detail.html" title="Route detail"></iframe></a>
+        <h3>Route detail</h3>
+        <p>A community route: distance, surface, safety ratings and comments. Save it to follow it on a run.</p>
+        <div class="links"><a href="screens/route_detail.html">Light</a><a href="screens/route_detail.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/saved_routes.html" data-href="screens/saved_routes.html"><iframe loading="lazy" tabindex="-1" data-src="screens/saved_routes.html" title="Saved routes"></iframe></a>
+        <h3>Saved routes</h3>
+        <p>Profile → Saved routes.</p>
+        <div class="links"><a href="screens/saved_routes.html">Light</a><a href="screens/saved_routes.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/people_run_with.html" data-href="screens/people_run_with.html"><iframe loading="lazy" tabindex="-1" data-src="screens/people_run_with.html" title="People I&#x27;ve run with"></iframe></a>
+        <h3>People I&#x27;ve run with</h3>
+        <p>Profile → People I've run with. Private to you.</p>
+        <div class="links"><a href="screens/people_run_with.html">Light</a><a href="screens/people_run_with.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Clubs &amp; events <span>8</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/clubs_browse.html" data-href="screens/clubs_browse.html"><iframe loading="lazy" tabindex="-1" data-src="screens/clubs_browse.html" title="Discover clubs"></iframe></a>
+        <h3>Discover clubs</h3>
+        <p>From the clubs button on the map. Follow a club to hear about its runs.</p>
+        <div class="links"><a href="screens/clubs_browse.html">Light</a><a href="screens/clubs_browse.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/club_detail.html" data-href="screens/club_detail.html"><iframe loading="lazy" tabindex="-1" data-src="screens/club_detail.html" title="Club"></iframe></a>
+        <h3>Club</h3>
+        <p>A club's page: follow, about, upcoming events. Organisers see New event.</p>
+        <div class="links"><a href="screens/club_detail.html">Light</a><a href="screens/club_detail.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/club_events.html" data-href="screens/club_events.html"><iframe loading="lazy" tabindex="-1" data-src="screens/club_events.html" title="Club events"></iframe></a>
+        <h3>Club events</h3>
+        <p>Every club event nearby, by day.</p>
+        <div class="links"><a href="screens/club_events.html">Light</a><a href="screens/club_events.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/club_event_detail.html" data-href="screens/club_event_detail.html"><iframe loading="lazy" tabindex="-1" data-src="screens/club_event_detail.html" title="Club event"></iframe></a>
+        <h3>Club event</h3>
+        <p>When, where, distance, pace groups and spots. Joining unlocks the members-only group chat.</p>
+        <div class="links"><a href="screens/club_event_detail.html">Light</a><a href="screens/club_event_detail.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/event_chat.html" data-href="screens/event_chat.html"><iframe loading="lazy" tabindex="-1" data-src="screens/event_chat.html" title="Event group chat"></iframe></a>
+        <h3>Event group chat</h3>
+        <p>For people who joined. Organisers can pin messages.</p>
+        <div class="links"><a href="screens/event_chat.html">Light</a><a href="screens/event_chat.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/club_register.html" data-href="screens/club_register.html"><iframe loading="lazy" tabindex="-1" data-src="screens/club_register.html" title="Register a club"></iframe></a>
+        <h3>Register a club</h3>
+        <p>Organisers must be verified. Clubs go live straight away.</p>
+        <div class="links"><a href="screens/club_register.html">Light</a><a href="screens/club_register.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/create_event.html" data-href="screens/create_event.html"><iframe loading="lazy" tabindex="-1" data-src="screens/create_event.html" title="Create club event"></iframe></a>
+        <h3>Create club event</h3>
+        <p>Organisers: title, category, meeting point or route, when, distance, surface, pace groups, capacity.</p>
+        <div class="links"><a href="screens/create_event.html">Light</a><a href="screens/create_event.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/followed_clubs.html" data-href="screens/followed_clubs.html"><iframe loading="lazy" tabindex="-1" data-src="screens/followed_clubs.html" title="Followed clubs"></iframe></a>
+        <h3>Followed clubs</h3>
+        <p>Profile → Followed clubs.</p>
+        <div class="links"><a href="screens/followed_clubs.html">Light</a><a href="screens/followed_clubs.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Races <span>5</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/races.html" data-href="screens/races.html"><iframe loading="lazy" tabindex="-1" data-src="screens/races.html" title="My races"></iframe></a>
+        <h3>My races</h3>
+        <p>From the races button on the map or Profile → Races. Upcoming with a countdown; completed with your times.</p>
+        <div class="links"><a href="screens/races.html">Light</a><a href="screens/races.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/race_detail.html" data-href="screens/race_detail.html"><iframe loading="lazy" tabindex="-1" data-src="screens/race_detail.html" title="Race"></iframe></a>
+        <h3>Race</h3>
+        <p>Who's running it, and a chat for everyone training for it.</p>
+        <div class="links"><a href="screens/race_detail.html">Light</a><a href="screens/race_detail.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/race_chat.html" data-href="screens/race_chat.html"><iframe loading="lazy" tabindex="-1" data-src="screens/race_chat.html" title="Race chat"></iframe></a>
+        <h3>Race chat</h3>
+        <p>Everyone training for the same race; anyone can post an open run here.</p>
+        <div class="links"><a href="screens/race_chat.html">Light</a><a href="screens/race_chat.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/add_race.html" data-href="screens/add_race.html"><iframe loading="lazy" tabindex="-1" data-src="screens/add_race.html" title="Add a race"></iframe></a>
+        <h3>Add a race</h3>
+        <p>Name, day, city and website. Suggests a matching race so you land with the others running it.</p>
+        <div class="links"><a href="screens/add_race.html">Light</a><a href="screens/add_race.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/add_race_result.html" data-href="screens/add_race_result.html"><iframe loading="lazy" tabindex="-1" data-src="screens/add_race_result.html" title="Add a race result"></iframe></a>
+        <h3>Add a race result</h3>
+        <p>Pick one of your races and add your time.</p>
+        <div class="links"><a href="screens/add_race_result.html">Light</a><a href="screens/add_race_result.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Profile <span>3</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/profile.html" data-href="screens/profile.html"><iframe loading="lazy" tabindex="-1" data-src="screens/profile.html" title="My Profile"></iframe></a>
+        <h3>My Profile</h3>
+        <p>Profile tab. Round avatar now (no cover photo); tap it for the photo reel, camera to change it. Cards below edit in place.</p>
+        <div class="links"><a href="screens/profile.html">Light</a><a href="screens/profile.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/notifications.html" data-href="screens/notifications.html"><iframe loading="lazy" tabindex="-1" data-src="screens/notifications.html" title="Notifications"></iframe></a>
+        <h3>Notifications</h3>
+        <p>The bell on the map. Requests, chats, activities near you, clubs and races.</p>
+        <div class="links"><a href="screens/notifications.html">Light</a><a href="screens/notifications.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/profile_viewers.html" data-href="screens/profile_viewers.html"><iframe loading="lazy" tabindex="-1" data-src="screens/profile_viewers.html" title="Profile views"></iframe></a>
+        <h3>Profile views</h3>
+        <p>Everyone sees how many; Pro shows who.</p>
+        <div class="links"><a href="screens/profile_viewers.html">Light</a><a href="screens/profile_viewers.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Settings <span>12</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/settings.html" data-href="screens/settings.html"><iframe loading="lazy" tabindex="-1" data-src="screens/settings.html" title="Settings"></iframe></a>
+        <h3>Settings</h3>
+        <p>Profile → gear. Delete Account sits at the very bottom.</p>
+        <div class="links"><a href="screens/settings.html">Light</a><a href="screens/settings.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/settings_account.html" data-href="screens/settings_account.html"><iframe loading="lazy" tabindex="-1" data-src="screens/settings_account.html" title="Settings — Account"></iframe></a>
+        <h3>Settings — Account</h3>
+        <p>Account info, verification, appearance (light/dark/system), language.</p>
+        <div class="links"><a href="screens/settings_account.html">Light</a><a href="screens/settings_account.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/settings_plan.html" data-href="screens/settings_plan.html"><iframe loading="lazy" tabindex="-1" data-src="screens/settings_plan.html" title="Settings — Plan"></iframe></a>
+        <h3>Settings — Plan</h3>
+        <p>Your tier and what it unlocks; Manage subscription goes to the App Store / Google Play.</p>
+        <div class="links"><a href="screens/settings_plan.html">Light</a><a href="screens/settings_plan.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/settings_discovery.html" data-href="screens/settings_discovery.html"><iframe loading="lazy" tabindex="-1" data-src="screens/settings_discovery.html" title="Settings — Discovery &amp; privacy"></iframe></a>
+        <h3>Settings — Discovery &amp; privacy</h3>
+        <p>Pause Discovery (Pro), who can see you, distance visibility, units.</p>
+        <div class="links"><a href="screens/settings_discovery.html">Light</a><a href="screens/settings_discovery.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/settings_notifications.html" data-href="screens/settings_notifications.html"><iframe loading="lazy" tabindex="-1" data-src="screens/settings_notifications.html" title="Settings — Notifications"></iframe></a>
+        <h3>Settings — Notifications</h3>
+        <p>Choose what you're told about.</p>
+        <div class="links"><a href="screens/settings_notifications.html">Light</a><a href="screens/settings_notifications.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/settings_community.html" data-href="screens/settings_community.html"><iframe loading="lazy" tabindex="-1" data-src="screens/settings_community.html" title="Settings — Community"></iframe></a>
+        <h3>Settings — Community</h3>
+        <p>Instagram only for now; UGC creators, TikTok and YouTube are hidden until they're ready.</p>
+        <div class="links"><a href="screens/settings_community.html">Light</a><a href="screens/settings_community.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/settings_support.html" data-href="screens/settings_support.html"><iframe loading="lazy" tabindex="-1" data-src="screens/settings_support.html" title="Settings — Support"></iframe></a>
+        <h3>Settings — Support</h3>
+        <p>Report an issue, leave a review, Help & FAQ. (Community guidelines hidden until the page exists.)</p>
+        <div class="links"><a href="screens/settings_support.html">Light</a><a href="screens/settings_support.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/settings_about.html" data-href="screens/settings_about.html"><iframe loading="lazy" tabindex="-1" data-src="screens/settings_about.html" title="Settings — About"></iframe></a>
+        <h3>Settings — About</h3>
+        <p>Terms, Privacy Policy, Blocked Users.</p>
+        <div class="links"><a href="screens/settings_about.html">Light</a><a href="screens/settings_about.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/account_info.html" data-href="screens/account_info.html"><iframe loading="lazy" tabindex="-1" data-src="screens/account_info.html" title="Account info"></iframe></a>
+        <h3>Account info</h3>
+        <p>Email (fixed) and password.</p>
+        <div class="links"><a href="screens/account_info.html">Light</a><a href="screens/account_info.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/blocked_users.html" data-href="screens/blocked_users.html"><iframe loading="lazy" tabindex="-1" data-src="screens/blocked_users.html" title="Blocked users"></iframe></a>
+        <h3>Blocked users</h3>
+        <p>Settings → About → Blocked Users.</p>
+        <div class="links"><a href="screens/blocked_users.html">Light</a><a href="screens/blocked_users.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/delete_account.html" data-href="screens/delete_account.html"><iframe loading="lazy" tabindex="-1" data-src="screens/delete_account.html" title="Delete account"></iframe></a>
+        <h3>Delete account</h3>
+        <p>Permanent. Type DELETE to confirm.</p>
+        <div class="links"><a href="screens/delete_account.html">Light</a><a href="screens/delete_account.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/feedback.html" data-href="screens/feedback.html"><iframe loading="lazy" tabindex="-1" data-src="screens/feedback.html" title="Report an issue"></iframe></a>
+        <h3>Report an issue</h3>
+        <p>Settings → Support → Report an issue.</p>
+        <div class="links"><a href="screens/feedback.html">Light</a><a href="screens/feedback.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+  <section>
+    <h2>Izuke Pro <span>2</span></h2>
+    <div class="grid">
+      <article class="shot">
+        <a class="thumb" href="screens/paywall.html" data-href="screens/paywall.html"><iframe loading="lazy" tabindex="-1" data-src="screens/paywall.html" title="Izuke Pro"></iframe></a>
+        <h3>Izuke Pro</h3>
+        <p>Monthly or yearly through the App Store / Google Play, with the store's free trial. Safety features are always free.</p>
+        <div class="links"><a href="screens/paywall.html">Light</a><a href="screens/paywall.html?theme=dark">Dark</a></div>
+      </article>
+      <article class="shot">
+        <a class="thumb" href="screens/pro_sheet.html" data-href="screens/pro_sheet.html"><iframe loading="lazy" tabindex="-1" data-src="screens/pro_sheet.html" title="Pro feature sheet"></iframe></a>
+        <h3>Pro feature sheet</h3>
+        <p>Shown when a free user taps a Pro feature — here, Pause Discovery.</p>
+        <div class="links"><a href="screens/pro_sheet.html">Light</a><a href="screens/pro_sheet.html?theme=dark">Dark</a></div>
+      </article>
+    </div>
+  </section>
+<script>
+  // Thumbnails follow the chosen theme; links into screens keep it too.
+  const dark = new URLSearchParams(location.search).get('theme') === 'dark';
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+  document.getElementById(dark ? 't-dark' : 't-light').classList.add('on');
+  const q = dark ? '?theme=dark' : '';
+  document.querySelectorAll('iframe[data-src]').forEach(f => f.src = f.dataset.src + q);
+  document.querySelectorAll('a[data-href]').forEach(a => a.href = a.dataset.href + q);
+  function fit() {
+    document.querySelectorAll('.thumb').forEach(t => {
+      const f = t.querySelector('iframe');
+      f.style.transform = 'scale(' + (t.clientWidth / 390) + ')';
+    });
+  }
+  addEventListener('resize', fit); fit();
+</script>
+</body>
+</html>

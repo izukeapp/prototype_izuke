@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izuke – Chat with a match</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Caveat:wght@600&family=Bebas+Neue&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="../assets/proto.css">
+<script src="../assets/proto.js"></script>
+</head>
+<body>
+<div class="phone">
+  <div data-status></div>
+  <div class="topbar"><a class="icon-btn plain" href="matches.html"><i class="ph ph-arrow-left"></i></a><span class="av s40 photo1"></span><div class="grow"><div class="title-s">Linh <i class="ph-fill ph-seal-check verified"></i></div><div class="tiny" style="color:var(--success)">Online</div></div><span class="icon-btn"><i class="ph ph-dots-three"></i></span></div>
+  <div class="divider"></div>
+  <div class="body" style="padding:10px 14px">
+    <div class="sys">Yesterday</div>
+    <div class="bubble in">Hey! Saw you run by the river too 😄</div>
+    <div class="bubble out mt8">Yes! Tomorrow morning?</div>
+    <div class="card mt12" style="padding:14px;border:1.5px solid var(--berry)">
+      <div class="row" style="justify-content:space-between"><span class="mono berry">Run Invite</span><span class="pill green">Accepted</span></div>
+      <div class="title-m mt8">You're going running with Linh!</div>
+      <div class="col gap6 mt8 small">
+        <div class="row gap8"><i class="ph ph-calendar-blank t2"></i>Tomorrow · 06:00</div>
+        <div class="row gap8"><i class="ph ph-map-pin t2"></i>Thảo Điền riverside path</div>
+        <div class="row gap8"><i class="ph ph-person-simple-run t2"></i>8 km · 5:30 min/km</div>
+      </div>
+      <a class="btn sm outline berry mt12" href="safe_consent.html"><i class="ph ph-shield-check berry"></i>Share live location with a friend</a>
+      <div class="row gap8 mt8"><span class="btn sm outline"><i class="ph ph-gps-fix"></i>Track this run</span></div>
+    </div>
+    <div class="bubble in mt12">See you at 6 tomorrow! 🏃‍♀️</div>
+  </div>
+  <div class="composer"><span class="icon-btn"><i class="ph ph-plus"></i></span><span class="field">Message…</span><span class="send"><i class="ph-fill ph-paper-plane-right"></i></span></div>
+  <div data-home></div>
+</div>
+<p class="proto-note">1:1 chat. A planned run shows as a card; live location from 2h before; after the run, confirm, rate and Create Moment. ("Share your run" is hidden at launch.)</p>
+</body>
+</html>

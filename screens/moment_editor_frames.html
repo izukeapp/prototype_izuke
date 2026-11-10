@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izuke – Moment editor — several photos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Caveat:wght@600&family=Bebas+Neue&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="../assets/proto.css">
+<script src="../assets/proto.js"></script>
+</head>
+<body>
+<div class="phone">
+  <div data-status></div>
+  <div class="topbar"><span class="icon-btn plain"><i class="ph ph-x berry"></i></span><span class="t">Capture the Moment</span></div>
+  <div class="body" style="display:flex;justify-content:center;padding:4px 0 0">
+    <div style="position:relative;width:290px;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#FBD3E0;box-shadow:0 10px 24px rgba(0,0,0,.25)">
+      <div style="position:absolute;left:18px;top:80px;width:130px;padding:8px 8px 26px;background:#141414;transform:rotate(-3deg)">
+        <div class="img run" style="height:96px;filter:grayscale(1) contrast(1.4);position:relative"><span style="position:absolute;width:26px;height:26px;border-radius:50%;background:var(--berry);border:1.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);display:grid;place-items:center;color:#fff;font-size:13px;top:6px;right:6px"><i class="ph-fill ph-pencil-simple"></i></span></div>
+        <div class="img onb" style="height:96px;margin-top:6px;filter:grayscale(1) contrast(1.4);position:relative"><span style="position:absolute;width:26px;height:26px;border-radius:50%;background:var(--berry);border:1.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);display:grid;place-items:center;color:#fff;font-size:13px;top:6px;right:6px"><i class="ph-fill ph-pencil-simple"></i></span></div>
+        <div style="height:96px;margin-top:6px;background:#3A3A40;position:relative;display:grid;place-items:center;color:rgba(255,255,255,.7);font-size:9px;text-align:center"><span><i class="ph ph-camera-plus" style="font-size:20px"></i><br>Tap to add your photo</span><span style="position:absolute;width:26px;height:26px;border-radius:50%;background:var(--berry);border:1.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);display:grid;place-items:center;color:#fff;font-size:13px;top:6px;right:6px"><i class="ph-fill ph-pencil-simple"></i></span></div>
+        <div style="color:#fff;font:600 9px 'Inter';text-align:center;margin-top:6px">izuke</div>
+      </div>
+      <div style="position:absolute;left:162px;right:14px;top:150px">
+        <div style="font:900 20px/1 'Hanken Grotesk';color:#A8114F;position:relative">HYDROX FRESH START<span style="position:absolute;width:26px;height:26px;border-radius:50%;background:var(--berry);border:1.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);display:grid;place-items:center;color:#fff;font-size:13px;top:-12px;right:-6px"><i class="ph-fill ph-pencil-simple"></i></span></div>
+        <div style="background:#fff;border-radius:10px;padding:8px;font:600 10px 'Inter';color:#111;margin-top:12px">Come prepared to have fun like never before.</div>
+        <div style="font:600 9px 'Inter';color:#111;margin-top:8px">John · 08.11.26</div>
+      </div>
+    </div>
+  </div>
+  <div class="chips" style="padding:12px 20px 0"><span class="chip sm"><i class="ph ph-sliders-horizontal"></i>On the card</span></div>
+  <div class="pad" style="padding-top:14px;padding-bottom:34px"><span class="btn primary">Next <i class="ph-bold ph-caret-right"></i></span></div>
+  <div data-home></div>
+</div>
+<p class="proto-note">Photobooth (3), Scrapbook and Corkboard (2): every frame has its own pencil; an empty frame says "Tap to add your photo".</p>
+</body>
+</html>

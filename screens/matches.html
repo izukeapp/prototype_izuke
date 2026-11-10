@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izuke – Matches</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Caveat:wght@600&family=Bebas+Neue&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="../assets/proto.css">
+<script src="../assets/proto.js"></script>
+</head>
+<body>
+<div class="phone">
+  <div data-status></div>
+  <div class="topbar"><span class="big">Matches</span></div>
+  <div class="body pad">
+    <div class="input" style="min-height:44px"><i class="ph ph-magnifying-glass"></i>Search runners…</div>
+    <div class="col gap10 mt12">
+      <a class="card row gap12" href="pending_requests.html" style="padding:14px"><span class="ico" style="width:44px;height:44px;border-radius:14px;background:var(--berry-soft);display:grid;place-items:center"><i class="ph-fill ph-hand-waving berry" style="font-size:22px"></i></span><div class="grow"><div class="title-s">Pending Requests</div><div class="t2 small">2 runners waiting on you</div></div><span class="pill berry">2</span></a>
+      <a class="card row gap12" href="my_runs.html" style="padding:14px"><span style="width:44px;height:44px;border-radius:14px;background:var(--surface);display:grid;place-items:center"><i class="ph ph-calendar-check t2" style="font-size:22px"></i></span><div class="grow"><div class="title-s">Your activities</div><div class="t2 small">3 activities</div></div><i class="ph ph-caret-right t3"></i></a>
+    </div>
+    <div class="row mt20" style="justify-content:space-between"><span class="mono">Running buddies</span><span class="t2 small">4 runners matched</span></div>
+    <div class="card mt8">
+      <a class="list-row" href="chat_thread.html"><span class="av s48 photo1"></span><div class="grow"><div class="row gap4"><span class="lbl">Linh</span><i class="ph-fill ph-seal-check verified"></i></div><div class="sub ellipsis" style="color:var(--heading);font-weight:600">See you at 6 tomorrow! 🏃‍♀️</div></div><div class="col" style="align-items:flex-end;gap:4px"><span class="t3 tiny">2m</span><span style="width:9px;height:9px;border-radius:50%;background:var(--berry)"></span></div></a>
+      <a class="list-row" href="chat_thread.html"><span class="av s48 g2">M</span><div class="grow"><div class="lbl">Minh</div><div class="sub ellipsis">Run completed · You ran 10.2 km</div></div><span class="t3 tiny">Sat</span></a>
+      <a class="list-row" href="chat_thread.html"><span class="av s48 photo3"></span><div class="grow"><div class="lbl">Thảo</div><div class="sub ellipsis">Run Invite · Tue 06:00</div></div><span class="t3 tiny">Thu</span></a>
+    </div>
+    <div class="row mt20" style="justify-content:space-between"><span class="mono">Race &amp; event chats</span></div>
+    <div class="card mt8" style="margin-bottom:20px">
+      <a class="list-row" href="race_chat.html"><span class="ico" style="background:rgba(242,182,50,.18);color:#B7791F"><i class="ph-fill ph-medal"></i></span><div class="grow"><div class="lbl">Race chats</div><div class="sub">1 race room</div></div><i class="ph ph-caret-right chev"></i></a>
+      <a class="list-row" href="event_chat.html"><span class="ico berry"><i class="ph-fill ph-users-three"></i></span><div class="grow"><div class="lbl">Event chats</div><div class="sub">2 group chats</div></div><i class="ph ph-caret-right chev"></i></a>
+    </div>
+  </div>
+  <nav data-tabbar="matches"></nav>
+  <div data-home></div>
+</div>
+<p class="proto-note">Matches tab: requests, your activities, running buddies, race and event chats.</p>
+</body>
+</html>

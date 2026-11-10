@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izuke – Safe Meetup — controls</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Caveat:wght@600&family=Bebas+Neue&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="../assets/proto.css">
+<script src="../assets/proto.js"></script>
+</head>
+<body>
+<div class="phone">
+  <div class="map photo" style="position:absolute;inset:0"></div>
+  <div data-status style="position:relative;z-index:3"></div>
+  <div class="scrim"></div>
+  <div class="sheet">
+    <div class="grab"></div>
+    <div class="row gap10"><i class="ph-fill ph-broadcast berry" style="font-size:22px"></i><div class="grow"><div class="title-m">Sharing your location</div><div class="t2 small">Until 22:00 · Mai can see you</div></div></div>
+    <div class="card mt16">
+      <a class="list-row" href="map_home.html"><span class="ico" style="background:rgba(34,197,94,.14);color:#16A34A"><i class="ph-bold ph-check"></i></span><span class="grow lbl">I'm safe — stop sharing</span></a>
+      <div class="list-row"><span class="ico"><i class="ph ph-clock-clockwise"></i></span><span class="grow lbl">Give me 30 more minutes</span></div>
+      <div class="list-row"><span class="ico"><i class="ph ph-paper-plane-tilt"></i></span><span class="grow lbl">Send the link again</span></div>
+    </div>
+    <a class="btn mt16" href="sos_countdown.html" style="background:#C62828;color:#fff;height:62px;font-size:17px"><i class="ph-fill ph-siren"></i>Hold for SOS</a>
+    <p class="t3 tiny center mt8">Hold 3 seconds. Letting go early cancels — nothing is sent.</p>
+  </div>
+</div>
+<p class="proto-note">I'm safe, 30 more minutes, send the link again, or hold SOS for 3 seconds.</p>
+</body>
+</html>

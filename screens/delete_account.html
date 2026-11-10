@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izuke – Delete account</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Caveat:wght@600&family=Bebas+Neue&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="../assets/proto.css">
+<script src="../assets/proto.js"></script>
+</head>
+<body>
+<div class="phone">
+  <div data-status></div>
+  <div class="topbar"><a class="icon-btn plain" href="settings.html"><i class="ph ph-arrow-left"></i></a><span class="t">Delete Account</span></div>
+  <div class="body pad">
+    <div class="card pad16 row top gap10" style="background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.3)"><i class="ph-fill ph-warning" style="color:var(--danger);font-size:22px"></i><span class="small" style="color:var(--heading)">This is permanent and cannot be undone. Your account will be deleted immediately.</span></div>
+    <span class="label mt16">What happens</span>
+    <div class="col gap10 small t2">
+      <div class="row top gap8"><i class="ph ph-x-circle" style="color:var(--danger)"></i>Your profile, location, preferences and verification will be removed.</div>
+      <div class="row top gap8"><i class="ph ph-x-circle" style="color:var(--danger)"></i>Your moments and feedback will be deleted.</div>
+      <div class="row top gap8"><i class="ph ph-x-circle" style="color:var(--danger)"></i>Your profile photo will be deleted from our servers.</div>
+      <div class="row top gap8"><i class="ph ph-user-circle-dashed t2"></i>Chats, matches and shared moments stay visible to the other runner, but you'll appear as 'Deleted runner'.</div>
+    </div>
+    <span class="label mt20">Type to confirm</span><div class="input focus filled" style="letter-spacing:2px">DELETE</div>
+    <div class="mt20"><span class="btn danger">Delete my account</span></div>
+  </div>
+  <div data-home></div>
+</div>
+<p class="proto-note">Permanent. Type DELETE to confirm.</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izuke – My races</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Caveat:wght@600&family=Bebas+Neue&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="../assets/proto.css">
+<script src="../assets/proto.js"></script>
+</head>
+<body>
+<div class="phone">
+  <div data-status></div>
+  <div class="topbar"><a class="icon-btn plain" href="profile.html"><i class="ph ph-arrow-left"></i></a><span class="t">Races</span><a class="icon-btn" href="add_race.html" style="background:var(--berry);color:#fff"><i class="ph-bold ph-plus"></i></a></div>
+  <div class="pad"><div class="row" style="background:var(--surface);border-radius:12px;padding:4px"><span class="grow center b" style="padding:8px;background:var(--card);border-radius:9px;color:var(--heading)">Upcoming</span><span class="grow center t2" style="padding:8px">Completed</span></div></div>
+  <div class="body pad mt12">
+    <a class="card" href="race_detail.html" style="display:block;padding:16px;background:linear-gradient(135deg,var(--berry),var(--berry-deep));border:0;color:#fff">
+      <div class="row" style="justify-content:space-between"><span style="font:700 11px 'JetBrains Mono';letter-spacing:1.4px;opacity:.85">SUN 16 NOV · HCMC</span><span class="pill" style="background:rgba(255,255,255,.2);color:#fff">Half</span></div>
+      <div style="font:800 20px 'Hanken Grotesk';margin-top:6px">Techcombank HCMC Marathon</div>
+      <div class="row mt12" style="align-items:flex-end;gap:6px"><span style="font:900 40px/1 'Hanken Grotesk'">7</span><span style="font:700 11px 'JetBrains Mono';letter-spacing:1.4px;margin-bottom:4px">DAYS</span><span class="grow"></span><span class="small" style="opacity:.85">9 runners · Race chat</span></div>
+    </a>
+    <div class="card row gap12 mt10" style="padding:14px;margin-top:10px"><div class="col center" style="width:52px;padding:6px 0;border-radius:12px;background:var(--surface)"><span class="tiny t2 b">JAN</span><span class="title-m">11</span></div><div class="grow"><div class="title-s">VnExpress Marathon Hà Nội</div><div class="t2 small">Full · 63 days</div></div></div>
+    <div class="card pad16 mt12 row gap10" style="border-style:dashed"><i class="ph ph-plus-circle berry" style="font-size:22px"></i><span class="b" style="color:var(--heading)">Add your next race</span></div>
+  </div>
+  <div data-home></div>
+</div>
+<p class="proto-note">From the races button on the map or Profile → Races. Upcoming with a countdown; completed with your times.</p>
+</body>
+</html>

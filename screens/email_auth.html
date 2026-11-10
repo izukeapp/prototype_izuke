@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izuke – Email sign-up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Caveat:wght@600&family=Bebas+Neue&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="../assets/proto.css">
+<script src="../assets/proto.js"></script>
+</head>
+<body>
+<div class="phone">
+  <div data-status></div>
+  <div class="topbar"><a class="icon-btn plain" href="auth.html"><i class="ph ph-arrow-left"></i></a></div>
+  <div class="body pad">
+    <h1 class="title-xl" style="font-size:30px">Join Izuke</h1>
+    <p class="t2 mt4">Create an account to find your crew.</p>
+    <div class="row mt20" style="background:var(--surface);border-radius:14px;padding:4px">
+      <span class="grow center t2" style="padding:10px;font-weight:600">Sign In</span>
+      <span class="grow center" style="padding:10px;font-weight:700;background:var(--card);border-radius:11px;color:var(--heading);box-shadow:0 1px 3px rgba(0,0,0,.08)">Sign Up</span>
+    </div>
+    <div class="mt20"><span class="label">Full Name</span><div class="input filled">John Doe</div></div>
+    <div class="mt16"><span class="label">Email</span><div class="input focus filled">john@example.com</div></div>
+    <div class="mt16"><span class="label">Password</span><div class="input">••••••••<i class="ph ph-eye" style="margin-left:auto"></i></div></div>
+    <div class="mt24"><a class="btn primary" href="check_email.html">Create Account</a></div>
+    <div class="row gap10 t3 small mt20"><span class="grow divider"></span>or continue with<span class="grow divider"></span></div>
+    <div class="row gap10 mt16">
+      <span class="btn outline sm"><i class="ph-fill ph-apple-logo"></i></span>
+      <span class="btn outline sm"><i class="ph-bold ph-google-logo"></i></span>
+      <span class="btn outline sm"><i class="ph-fill ph-facebook-logo" style="color:#1877F2"></i></span>
+    </div>
+  </div>
+  <div data-home></div>
+</div>
+<p class="proto-note">Sign In / Sign Up tabs; sign-up asks for a name.</p>
+</body>
+</html>
